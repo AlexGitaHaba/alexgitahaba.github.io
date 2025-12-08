@@ -1,0 +1,262 @@
+/* ====== Базовые стили ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #1e1e1e;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.section {
+  padding: 60px 10%;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* ====== HERO ====== */
+.hero {
+  height: 100vh;
+  background: url("img/main.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.nav {
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  position: relative;
+  z-index: 10;
+}
+
+.nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.hero-content {
+  margin-top: auto;
+  padding: 0 10% 80px;
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #b87f36;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 6px;
+}
+
+/* ====== ОБОРУДОВАНИЕ ====== */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.equipment-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ====== КОФЕ ====== */
+.coffee-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.coffee-grid img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ====== ПОЧЕМУ ====== */
+.why-img {
+  width: 260px;
+  border-radius: 15px;
+}
+
+/* ====== ВИДЕО ====== */
+.video-container {
+  position: relative;
+  width: 1280px;
+  max-width: 720px;
+  margin: 0 auto 30px;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-container video {
+  width: 1280px;
+  height: auto;
+  min-height: 720px;
+  display: block;
+  background: #000;
+}
+
+.video-description {
+  text-align: center;
+  margin: 20px 0;
+  color: #ccc;
+  font-size: 18px;
+}
+
+/* ====== КАРТА ====== */
+.map-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.map-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.map-info {
+  background: #2a2a2a;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #111;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* ====== АДАПТИВ ====== */
+@media (max-width: 900px) {
+  .equipment-grid,
+  .coffee-grid,
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    height: auto;
+    padding-bottom: 60px;
+  }
+
+  .hero-content {
+    padding-bottom: 20px;
+  }
+  
+  .video-container video {
+    min-height: 300px;
+  }
+}
+
+/* ====== ПОЧЕМУ ====== */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.why-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  justify-self: end;
+}
+
+.why-text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.benefit {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.benefit-icon {
+  background: #b87f36;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-icon i {
+  font-size: 20px;
+  color: white;
+}
+
+.benefit-content h3 {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.benefit-content p {
+  color: #ccc;
+  font-size: 15px;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .why-img {
+    justify-self: center;
+    order: -1; /* Картинка сверху на мобильных */
+  }
+}
