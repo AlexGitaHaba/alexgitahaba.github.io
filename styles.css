@@ -23,7 +23,7 @@ h1, h2, h3 {
 /* ====== HERO ====== */
 .hero {
   height: 100vh;
-  background: url("img/main.png") center/cover no-repeat;
+  background: url("main.png") center/cover no-repeat;
   position: relative;
   display: flex;
   flex-direction: column;
