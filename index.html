@@ -8,39 +8,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  <!-- Навигация -->
+  <nav class="nav">
+    <div class="logo">
+      <img src="logo.png" alt="Coffee Gym Logo" class="logo-img">
+    </div>
 
-  <header class="hero">
-    <nav class="nav">
-      <div class="logo">
-        <img src="logo.png" alt="Coffee Gym Logo">
-      </div>
+    <ul class="nav-links">
+      <li><a href="#home">Главная</a></li>
+      <li><a href="#equipment">Зал</a></li>
+      <li><a href="#coffee">Кофе</a></li>
+      <li><a href="#video">Видео</a></li>
+      <li><a href="#why">Почему мы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
 
-      <ul class="nav-links">
-        <li><a href="#home">Главная</a></li>
-        <li><a href="#equipment">Зал</a></li>
-        <li><a href="#coffee">Кофе</a></li>
-        <li><a href="#video">Видео</a></li>
-        <li><a href="#why">Почему мы</a></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
+    <div class="phone">
+      <i class="fas fa-phone"></i>
+      <span>+7 (929) 754-63-62</span>
+    </div>
+    
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
 
-      <div class="phone">
-        <i class="fas fa-phone"></i>
-        +7 (929) 754-63-62
-      </div>
-      
-      <button class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </button>
-    </nav>
-
-    <div class="hero-content" id="home">
+  <!-- Главный баннер -->
+  <header class="hero" id="home">
+    <div class="hero-content">
       <h1>Coffee Gym — энергия спорта и вкус кофе в одном месте</h1>
       <p>Абонемент включает бесплатный кофе. Тренируйся с удовольствием, отдыхая за чашкой ароматного напитка</p>
-      <button class="btn">Попробовать бесплатно</button>
+      <button class="btn cta-btn" onclick="openModal()">Попробовать бесплатно</button>
     </div>
   </header>
 
+  <!-- Оборудование -->
   <section class="equipment section" id="equipment">
     <h2>Современное оборудование</h2>
     <div class="equipment-grid">
@@ -49,21 +51,26 @@
           Наш зал оснащён профессиональными тренажёрами для силовых и кардиотренировок.
           Просторные залы с панорамными окнами создают атмосферу, куда хочется возвращаться снова и снова.
         </p>
-        <ul>
+        <ul class="features-list">
           <li><i class="fas fa-check"></i> Силовые тренажёры премиум-класса</li>
           <li><i class="fas fa-check"></i> Кардио-зона с беговыми дорожками и эллипсами</li>
           <li><i class="fas fa-check"></i> Зона свободных весов</li>
           <li><i class="fas fa-check"></i> Функциональный тренинг</li>
         </ul>
       </div>
-      <img src="trenazh.png" alt="Оборудование зала" />
+      <div class="equipment-image">
+        <img src="trenazh.png" alt="Оборудование зала" loading="lazy">
+      </div>
     </div>
   </section>
 
+  <!-- Кофе -->
   <section class="coffee section" id="coffee">
     <h2>Кофе включён в абонемент!</h2>
     <div class="coffee-grid">
-      <img src="coffee.png" alt="Кофе-бар" />
+      <div class="coffee-image">
+        <img src="coffee.png" alt="Кофе-бар" loading="lazy">
+      </div>
       <div class="coffee-text">
         <p>
           После тренировки тебя ждёт свежесваренный кофе. Эспрессо, капучино или латте —
@@ -94,94 +101,83 @@
     </div>
   </section>
 
+  <!-- Почему мы -->
   <section class="why section" id="why">
-  <h2>Почему выбирают Coffee Gym?</h2>
-  <div class="why-grid">
-    <div class="why-text">
-      <div class="benefit">
-        <div class="benefit-icon">
-          <i class="fas fa-coffee"></i>
+    <h2>Почему выбирают Coffee Gym?</h2>
+    <div class="why-grid">
+      <div class="why-text">
+        <div class="benefit">
+          <div class="benefit-icon">
+            <i class="fas fa-coffee"></i>
+          </div>
+          <div class="benefit-content">
+            <h3>Бесплатный кофе</h3>
+            <p>Каждая тренировка завершается чашкой свежесваренного кофе</p>
+          </div>
         </div>
-        <div class="benefit-content">
-          <h3>Бесплатный кофе</h3>
-          <p>Каждая тренировка завершается чашкой свежесваренного кофе</p>
+        
+        <div class="benefit">
+          <div class="benefit-icon">
+            <i class="fas fa-dumbbell"></i>
+          </div>
+          <div class="benefit-content">
+            <h3>Современное оборудование</h3>
+            <p>Новейшие тренажёры от ведущих мировых производителей</p>
+          </div>
+        </div>
+        
+        <div class="benefit">
+          <div class="benefit-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="benefit-content">
+            <h3>Дружеская атмосфера</h3>
+            <p>Поддержка тренеров и единомышленников</p>
+          </div>
+        </div>
+        
+        <div class="benefit">
+          <div class="benefit-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="benefit-content">
+            <h3>Удобный график</h3>
+            <p>Работаем с 7:00 до 23:00 без выходных</p>
+          </div>
         </div>
       </div>
-      
-      <div class="benefit">
-        <div class="benefit-icon">
-          <i class="fas fa-dumbbell"></i>
-        </div>
-        <div class="benefit-content">
-          <h3>Современное оборудование</h3>
-          <p>Новейшие тренажёры от ведущих мировых производителей</p>
-        </div>
-      </div>
-      
-      <div class="benefit">
-        <div class="benefit-icon">
-          <i class="fas fa-users"></i>
-        </div>
-        <div class="benefit-content">
-          <h3>Дружеская атмосфера</h3>
-          <p>Поддержка тренеров и единомышленников</p>
-        </div>
-      </div>
-      
-      <div class="benefit">
-        <div class="benefit-icon">
-          <i class="fas fa-clock"></i>
-        </div>
-        <div class="benefit-content">
-          <h3>Удобный график</h3>
-          <p>Работаем с 7:00 до 23:00 без выходных</p>
-        </div>
+      <div class="why-image">
+        <img src="female.png" alt="Девушка с кофе" loading="lazy">
       </div>
     </div>
-    <img src="female.png" alt="Девушка с кофе" class="why-img" />
-  </div>
-</section>
+  </section>
 
-<section class="video section" id="video">
-  <h2>Экскурсия по нашему залу</h2>
-  
-  <div class="video-container" style="
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto 30px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  ">
-    <iframe 
-      width="1920" 
-      height="1080" 
-      src="https://rutube.ru/play/embed/7ea3d1d4a9411637d943bc8fe97dc4d9/"  
-      title="Экскурсия по Coffee Gym" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen
-      style="
-        width: 100%;
-        height: 1080px;
-        max-height: 80vh;
-        display: block;
-        border: none;
-      ">
-    </iframe>
-  </div>
-  
-  <p class="video-description">Посмотрите, как устроен наш зал и кофейная зона</p>
-</section>
-	
+  <!-- Видео -->
+  <section class="video section" id="video">
+    <h2>Экскурсия по нашему залу</h2>
+    
+    <div class="video-container">
+      <iframe 
+        src="https://rutube.ru/play/embed/7ea3d1d4a9411637d943bc8fe97dc4d9/"  
+        title="Экскурсия по Coffee Gym" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    
+    <p class="video-description">Посмотрите, как устроен наш зал и кофейная зона</p>
+  </section>
+
+  <!-- Контакты и карта -->
   <section class="map section" id="contacts">
     <h2>Как нас найти</h2>
     <div class="map-container">
       <div class="map-placeholder">
         <!-- Здесь может быть карта Google или Yandex -->
-        <img src="map.png" alt="Карта расположения" />
+        <img src="map.png" alt="Карта расположения" loading="lazy">
         <div class="map-overlay">
-          <button class="map-btn">
+          <button class="map-btn" onclick="openMap()">
             <i class="fas fa-map-marker-alt"></i>
             Открыть в Google Maps
           </button>
@@ -215,10 +211,11 @@
     </div>
   </section>
 
+  <!-- Футер -->
   <footer>
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="img/logo.png" alt="Coffee Gym Logo">
+        <img src="logo.png" alt="Coffee Gym Logo">
         <span>Coffee Gym</span>
       </div>
       
@@ -232,8 +229,8 @@
       </div>
       
       <div class="footer-contact">
-        <p>+7 (929) 754-63-62</p>
-        <p>info@coffeegym.ru</p>
+        <p><i class="fas fa-phone"></i> +7 (929) 754-63-62</p>
+        <p><i class="fas fa-envelope"></i> info@coffeegym.ru</p>
       </div>
     </div>
     
@@ -245,5 +242,21 @@
       </a>
     </div>
   </footer>
+
+  <!-- Модальное окно -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+      <h3>Записаться на бесплатную тренировку</h3>
+      <form id="contactForm">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="Ваш телефон" required>
+        <input type="email" placeholder="Ваш email">
+        <button type="submit" class="btn">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
