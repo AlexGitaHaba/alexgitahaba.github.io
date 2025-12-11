@@ -53,7 +53,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
 // Открытие карты в Google Maps
 function openMap() {
   const address = encodeURIComponent('г. Иваново, ул. Спортивная, д. 15');
-  window.open(`https://www.google.com/maps/search/?api=1&query=${address}`, '_blank');
+  window.open(`https://www.google.com/maps/search/?api=1&query=Coffee+Gym+${address}`, '_blank');
 }
 
 // Плавная прокрутка для всех ссылок с якорями
