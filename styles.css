@@ -175,7 +175,6 @@ h2 {
   border: none;
   cursor: pointer;
   color: #fff;
-  border-radius: 8px;
   transition: all 0.3s;
   font-weight: 600;
   text-transform: uppercase;
@@ -211,7 +210,6 @@ h2 {
 .equipment-image img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
   display: block;
@@ -263,7 +261,6 @@ h2 {
 .coffee-image img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   display: block;
   min-height: 300px;
@@ -285,7 +282,6 @@ h2 {
 
 .menu-items {
   background: #2a2a2a;
-  border-radius: 10px;
   padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -354,7 +350,6 @@ h2 {
   background: #b87f36;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -387,7 +382,6 @@ h2 {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 30px;
-  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   background: #000;
@@ -436,7 +430,6 @@ h2 {
 
 .map-placeholder {
   position: relative;
-  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   background: #2a2a2a;
@@ -464,7 +457,6 @@ h2 {
   background: #b87f36;
   color: white;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   display: flex;
@@ -481,7 +473,6 @@ h2 {
 .map-info {
   background: #2a2a2a;
   padding: 30px;
-  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -530,7 +521,6 @@ h2 {
   width: 45px;
   height: 45px;
   background: #333;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
