@@ -68,7 +68,7 @@ h2 {
 }
 
 .logo-img {
-  height: 80px;
+  height: 120px; /* УВЕЛИЧЕНО С 80px */
   width: auto;
   display: block;
   transition: transform 0.3s;
@@ -137,7 +137,7 @@ h2 {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 120px 5% 80px;
+  padding: 140px 5% 80px; /* Увеличено с 120px */
   margin-top: 80px;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
               url('main.png') center/cover no-repeat;
@@ -218,6 +218,7 @@ h2 {
   display: block;
   min-height: 300px;
   object-fit: cover;
+  /* УБРАНО: border: 2px solid #b87f36; */
 }
 
 .equipment-text p {
@@ -268,6 +269,7 @@ h2 {
   display: block;
   min-height: 300px;
   object-fit: cover;
+  /* УБРАНО: border: 2px solid #b87f36; */
 }
 
 .coffee-text p {
@@ -334,6 +336,7 @@ h2 {
   display: block;
   min-height: 500px;
   object-fit: cover;
+  /* УБРАНО: border: 2px solid #b87f36; */
 }
 
 .why-text {
@@ -445,6 +448,7 @@ h2 {
   height: 400px;
   object-fit: cover;
   display: block;
+  /* УБРАНО: border: 2px solid #b87f36; */
 }
 
 .map-overlay {
@@ -489,12 +493,13 @@ h2 {
 }
 
 .coffee-gym-logo {
-  width: 350px;
+  width: 400px; /* УВЕЛИЧЕНО С 350px */
   height: auto;
   margin: 0 auto;
   display: block;
   min-height: 120px;
   object-fit: contain;
+  /* УБРАНО: border: 2px solid #b87f36; */
 }
 
 .contact-item {
@@ -555,7 +560,7 @@ footer {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 350px 2fr 1fr;
+  grid-template-columns: 400px 2fr 1fr; /* УВЕЛИЧЕНО С 350px */
   gap: 40px;
   margin-bottom: 30px;
   align-items: center;
@@ -563,12 +568,12 @@ footer {
 
 @media (max-width: 1200px) {
   .footer-content {
-    grid-template-columns: 300px 2fr 1fr;
+    grid-template-columns: 350px 2fr 1fr;
   }
   
   .coffee-gym-logo,
   .footer-logo img {
-    width: 300px;
+    width: 350px;
   }
 }
 
@@ -593,7 +598,7 @@ footer {
   
   .coffee-gym-logo,
   .footer-logo img {
-    width: 280px;
+    width: 320px;
   }
 }
 
@@ -605,13 +610,14 @@ footer {
 }
 
 .footer-logo img {
-  width: 350px;
+  width: 400px; /* УВЕЛИЧЕНО С 350px */
   height: auto;
   max-width: 100%;
   display: block;
   min-height: 120px;
   object-fit: contain;
   transition: opacity 0.3s;
+  /* УБРАНО: border: 2px solid #b87f36; */
 }
 
 .footer-logo img:hover {
@@ -805,7 +811,7 @@ footer {
   }
 
   .hero {
-    padding: 100px 5% 60px;
+    padding: 120px 5% 60px; /* Увеличено с 100px */
     text-align: center;
   }
 
@@ -818,24 +824,24 @@ footer {
   }
   
   .logo-img {
-    height: 65px;
+    height: 90px; /* Увеличено с 65px */
   }
   
   .coffee-gym-logo,
   .footer-logo img {
-    width: 250px;
+    width: 280px; /* Увеличено с 250px */
     min-height: 100px;
   }
 }
 
 @media (max-width: 480px) {
   .logo-img {
-    height: 55px;
+    height: 75px; /* Увеличено с 55px */
   }
   
   .coffee-gym-logo,
   .footer-logo img {
-    width: 220px;
+    width: 250px; /* Увеличено с 220px */
     min-height: 80px;
   }
 }
@@ -865,6 +871,18 @@ img {
   height: auto;
   display: block;
 }
+
+/* ====== УБРАНО: Обводки вокруг всех изображений ====== */
+/*
+.equipment-image img,
+.coffee-image img,
+.why-image img,
+.map-placeholder img,
+.footer-logo img,
+.coffee-gym-logo {
+  border: 2px solid #b87f36;
+}
+*/
 
 /* ====== Единый стиль для всех логотипов ====== */
 .logo-img,
