@@ -872,19 +872,6 @@ img {
   display: block;
 }
 
-/* ====== УБРАНО: Обводки вокруг всех изображений ====== */
-/*
-.equipment-image img,
-.coffee-image img,
-.why-image img,
-.map-placeholder img,
-.footer-logo img,
-.coffee-gym-logo {
-  border: 2px solid #b87f36;
-}
-*/
-
-/* ====== Единый стиль для всех логотипов ====== */
 .logo-img,
 .coffee-gym-logo,
 .footer-logo img {
