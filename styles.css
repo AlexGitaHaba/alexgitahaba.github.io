@@ -483,7 +483,7 @@ h2 {
 }
 
 .coffee-gym-logo {
-  width: 400px;
+  width: 200px;
   height: auto;
   margin: 0 auto;
   display: block;
@@ -562,7 +562,7 @@ footer {
   
   .coffee-gym-logo,
   .footer-logo img {
-    width: 350px;
+    width: 200px;
   }
 }
 
