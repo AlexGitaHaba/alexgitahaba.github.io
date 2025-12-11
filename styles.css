@@ -868,3 +868,22 @@ img, div, section, header, footer, nav, ul, li, a, button, input, textarea {
   outline: none !important;
   box-shadow: none !important;
 }
+
+/* ====== ИСПРАВЛЕНИЕ ФУТЕРА ====== */
+.footer-logo img {
+  height: 60px !important;
+  width: auto !important;
+  max-width: 150px !important;
+  min-height: auto !important;
+}
+
+.footer-content {
+  grid-template-columns: 150px 2fr 1fr !important;
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    height: 50px !important;
+    max-width: 120px !important;
+  }
+}
