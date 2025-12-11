@@ -67,7 +67,7 @@ h2 {
 }
 
 .logo-img {
-  height: 120px;
+  height: 90px;
   width: auto;
   display: block;
   transition: transform 0.3s;
@@ -818,7 +818,7 @@ footer {
   
   .coffee-gym-logo,
   .footer-logo img {
-    width: 280px;
+    width: 100px;
     min-height: 100px;
   }
 }
