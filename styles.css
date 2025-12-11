@@ -68,7 +68,7 @@ h2 {
 }
 
 .logo-img {
-  height: 60px; /* Такой же как в footer */
+  height: 60px;
   width: auto;
   display: block;
   transition: transform 0.3s;
@@ -325,7 +325,6 @@ h2 {
 .why-image img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   display: block;
   min-height: 500px;
@@ -473,18 +472,18 @@ h2 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Логотип в карте - УМЕНЬШЕН В 2 РАЗА */
+/* Логотип в карте */
 .map-logo {
   text-align: center;
   margin-bottom: 25px;
 }
 
 .coffee-gym-logo {
-  width: 200px; /* Уменьшено с 400px */
+  width: 200px;
   height: auto;
   margin: 0 auto;
   display: block;
-  min-height: 60px; /* Уменьшено с 120px */
+  min-height: 60px;
   object-fit: contain;
 }
 
@@ -531,63 +530,44 @@ h2 {
   transform: translateY(-3px);
 }
 
-/* ====== ФУТЕР - ЛОГОТИП ТАКОЙ ЖЕ КАК В HEADER ====== */
+/* ====== ФУТЕР - ИСПРАВЛЕННЫЙ ====== */
 footer {
   background: #111;
-  padding: 40px 5% 20px;
+  padding: 30px 5% 20px;
 }
 
 @media (min-width: 1200px) {
   footer {
-    padding: 40px 10% 20px;
+    padding: 30px 10% 20px;
   }
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: 200px 2fr 1fr; /* Уменьшено с 400px */
-  gap: 40px;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .footer-content {
-    grid-template-columns: 200px 2fr 1fr; /* Уменьшено */
-  }
-}
-
-@media (max-width: 992px) {
-  .footer-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
-    gap: 30px;
-  }
-  
-  .footer-logo {
-    order: 1;
-  }
-  
-  .footer-links {
-    order: 2;
-  }
-  
-  .footer-contact {
-    order: 3;
+    gap: 25px;
   }
 }
 
 .footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
+  flex: 0 0 auto;
 }
 
+/* ТАКОЙ ЖЕ ЛОГОТИП КАК В HEADER */
 .footer-logo img {
-  height: 60px; /* ТАКОЙ ЖЕ КАК В HEADER */
+  height: 60px;
   width: auto;
-  max-width: 200px;
+  max-width: 150px;
   display: block;
   object-fit: contain;
   transition: opacity 0.3s;
@@ -598,16 +578,26 @@ footer {
 }
 
 .footer-links {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    order: 3;
+    width: 100%;
+  }
 }
 
 .footer-links a {
   color: #ccc;
   text-decoration: none;
+  font-size: 14px;
   transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .footer-links a:hover {
@@ -615,57 +605,68 @@ footer {
 }
 
 .footer-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex: 0 0 auto;
+  text-align: right;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .footer-contact {
-    align-items: center;
+    text-align: center;
+    order: 2;
   }
 }
 
 .footer-contact p {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: #ccc;
+  font-size: 14px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .footer-contact p {
+    justify-content: center;
+  }
 }
 
 .footer-contact i {
   color: #b87f36;
+  font-size: 14px;
 }
 
 .footer-bottom {
   border-top: 1px solid #333;
-  padding-top: 20px;
+  padding-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
 }
 
 @media (max-width: 768px) {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    gap: 10px;
   }
 }
 
 .footer-bottom p {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 12px;
 }
 
 .back-to-top {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   color: #b87f36;
   text-decoration: none;
   font-weight: 600;
+  font-size: 14px;
   transition: color 0.3s;
 }
 
@@ -690,7 +691,6 @@ footer {
 .modal-content {
   background: #2a2a2a;
   padding: 40px;
-  border-radius: 15px;
   max-width: 500px;
   width: 90%;
   position: relative;
@@ -726,7 +726,6 @@ footer {
 .modal-content input {
   padding: 15px;
   border: 1px solid #444;
-  border-radius: 8px;
   background: #1e1e1e;
   color: #fff;
   font-size: 16px;
@@ -800,11 +799,9 @@ footer {
     height: 50px;
   }
   
-  .coffee-gym-logo,
   .footer-logo img {
     height: 50px;
-    width: auto;
-    min-height: auto;
+    max-width: 120px;
   }
 }
 
@@ -813,14 +810,9 @@ footer {
     height: 45px;
   }
   
-  .coffee-gym-logo,
   .footer-logo img {
     height: 45px;
-    width: auto;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
+    max-width: 100px;
   }
 }
 
@@ -848,42 +840,4 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-/* ====== УБИРАЕМ ВСЕ ОБВОДКИ ====== */
-img, div, section, header, footer, nav, ul, li, a, button, input, textarea {
-  border: none !important;
-  outline: none !important;
-}
-
-/* Отключаем рамки у картинок */
-.equipment-image img,
-.coffee-image img,
-.why-image img,
-.map-placeholder img,
-.logo-img,
-.coffee-gym-logo,
-.footer-logo img {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* ====== ИСПРАВЛЕНИЕ ФУТЕРА ====== */
-.footer-logo img {
-  height: 60px !important;
-  width: auto !important;
-  max-width: 150px !important;
-  min-height: auto !important;
-}
-
-.footer-content {
-  grid-template-columns: 150px 2fr 1fr !important;
-}
-
-@media (max-width: 768px) {
-  .footer-logo img {
-    height: 50px !important;
-    max-width: 120px !important;
-  }
 }
