@@ -116,3 +116,21 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.section').forEach(section => {
   observer.observe(section);
 });
+
+// Убираем все обводки с картинок
+document.addEventListener('DOMContentLoaded', function() {
+  // Находим все изображения и убираем границы
+  const allImages = document.querySelectorAll('img');
+  allImages.forEach(img => {
+    img.style.border = 'none';
+    img.style.outline = 'none';
+    img.style.boxShadow = 'none';
+  });
+  
+  // Также убираем границы у всех элементов
+  const allElements = document.querySelectorAll('*');
+  allElements.forEach(el => {
+    el.style.border = 'none';
+    el.style.outline = 'none';
+  });
+});
